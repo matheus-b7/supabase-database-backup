@@ -410,42 +410,6 @@ COMMENT ON TABLE "public"."dados_unirnutri" IS 'This is a duplicate of dados_afo
 
 
 
-CREATE TABLE IF NOT EXISTS "public"."dados_unirnutri_backup" (
-    "Dia" "date" NOT NULL,
-    "Campanha" "text" NOT NULL,
-    "Conjunto_de_Anuncios" "text" NOT NULL,
-    "Anuncio" "text" NOT NULL,
-    "Objetivo" "text" NOT NULL,
-    "Custo" numeric(10,2) NOT NULL,
-    "Leads" numeric,
-    "Compras" numeric,
-    "Page_View" numeric,
-    "Cliques" numeric,
-    "Impressoes" numeric,
-    "Alcance" numeric,
-    "Valor_de_Conversao" numeric(10,2),
-    "VV_3s" numeric,
-    "VV_25" numeric,
-    "VV_50" numeric,
-    "VV_75" numeric,
-    "VV_95" numeric,
-    "ad_id" "text" NOT NULL,
-    "id_data" "text" NOT NULL,
-    "creative_id" "text",
-    "status" "text",
-    "Qualificados" numeric,
-    "thumbnail_url" "text",
-    "permalink_url" "text"
-);
-
-
-ALTER TABLE "public"."dados_unirnutri_backup" OWNER TO "supabase_admin";
-
-
-COMMENT ON TABLE "public"."dados_unirnutri_backup" IS 'This is a duplicate of dados_rafa';
-
-
-
 ALTER TABLE ONLY "mercca_rastreio_whats"."whatsapp_anuncio"
     ADD CONSTRAINT "whatsapp_anuncio_pkey" PRIMARY KEY ("telefone");
 
@@ -483,11 +447,6 @@ ALTER TABLE ONLY "public"."dados_rafa"
 
 ALTER TABLE ONLY "public"."dados_top"
     ADD CONSTRAINT "dados_top_pkey" PRIMARY KEY ("id_data");
-
-
-
-ALTER TABLE ONLY "public"."dados_unirnutri_backup"
-    ADD CONSTRAINT "dados_unirnutri_pkey" PRIMARY KEY ("id_data");
 
 
 
@@ -785,13 +744,6 @@ GRANT ALL ON TABLE "public"."dados_unirnutri" TO "postgres";
 GRANT ALL ON TABLE "public"."dados_unirnutri" TO "anon";
 GRANT ALL ON TABLE "public"."dados_unirnutri" TO "authenticated";
 GRANT ALL ON TABLE "public"."dados_unirnutri" TO "service_role";
-
-
-
-GRANT ALL ON TABLE "public"."dados_unirnutri_backup" TO "postgres";
-GRANT ALL ON TABLE "public"."dados_unirnutri_backup" TO "anon";
-GRANT ALL ON TABLE "public"."dados_unirnutri_backup" TO "authenticated";
-GRANT ALL ON TABLE "public"."dados_unirnutri_backup" TO "service_role";
 
 
 
