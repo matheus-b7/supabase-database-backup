@@ -83,6 +83,18 @@ CREATE EXTENSION IF NOT EXISTS "uuid-ossp" WITH SCHEMA "extensions";
 
 
 
+
+CREATE OR REPLACE FUNCTION "public"."list_public_tables"() RETURNS TABLE("tablename" "text")
+    LANGUAGE "sql"
+    AS $$
+  select tablename
+  from pg_tables
+  where schemaname = 'public'
+$$;
+
+
+ALTER FUNCTION "public"."list_public_tables"() OWNER TO "supabase_admin";
+
 SET default_tablespace = '';
 
 SET default_table_access_method = "heap";
@@ -726,6 +738,13 @@ GRANT USAGE ON SCHEMA "public" TO "service_role";
 
 
 
+
+
+
+GRANT ALL ON FUNCTION "public"."list_public_tables"() TO "postgres";
+GRANT ALL ON FUNCTION "public"."list_public_tables"() TO "anon";
+GRANT ALL ON FUNCTION "public"."list_public_tables"() TO "authenticated";
+GRANT ALL ON FUNCTION "public"."list_public_tables"() TO "service_role";
 
 
 
