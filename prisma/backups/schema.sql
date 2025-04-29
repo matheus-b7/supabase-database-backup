@@ -172,6 +172,46 @@ COMMENT ON TABLE "public"."dados_afonso" IS 'This is a duplicate of dados_elinis
 
 
 
+CREATE TABLE IF NOT EXISTS "public"."dados_alex" (
+    "Dia" "date" NOT NULL,
+    "Campanha" "text" NOT NULL,
+    "Conjunto_de_Anuncios" "text" NOT NULL,
+    "Anuncio" "text" NOT NULL,
+    "Objetivo" "text" NOT NULL,
+    "Custo" numeric(10,2) NOT NULL,
+    "Leads" numeric,
+    "Compras" numeric,
+    "Page_View" numeric,
+    "Cliques" numeric,
+    "Impressoes" numeric,
+    "Alcance" numeric,
+    "Valor_de_Conversao" numeric(10,2),
+    "VV_3s" numeric,
+    "VV_25" numeric,
+    "VV_50" numeric,
+    "VV_75" numeric,
+    "VV_95" numeric,
+    "ad_id" "text" NOT NULL,
+    "id_data" "text" NOT NULL,
+    "creative_id" "text",
+    "status" "text",
+    "Qualificados" numeric,
+    "thumbnail_url" "text",
+    "permalink_url" "text",
+    "Leads_meta" numeric,
+    "Compras_meta" numeric,
+    "Valor_de_Conversao_meta" numeric,
+    "Conversas_iniciadas_meta" numeric
+);
+
+
+ALTER TABLE "public"."dados_alex" OWNER TO "supabase_admin";
+
+
+COMMENT ON TABLE "public"."dados_alex" IS 'This is a duplicate of dados_vanessa';
+
+
+
 CREATE TABLE IF NOT EXISTS "public"."dados_amanda" (
     "Dia" "date" NOT NULL,
     "Campanha" "text" NOT NULL,
@@ -208,6 +248,126 @@ ALTER TABLE "public"."dados_amanda" OWNER TO "supabase_admin";
 
 
 COMMENT ON TABLE "public"."dados_amanda" IS 'This is a duplicate of dados_top';
+
+
+
+CREATE TABLE IF NOT EXISTS "public"."dados_camila" (
+    "Dia" "date" NOT NULL,
+    "Campanha" "text" NOT NULL,
+    "Conjunto_de_Anuncios" "text" NOT NULL,
+    "Anuncio" "text" NOT NULL,
+    "Objetivo" "text" NOT NULL,
+    "Custo" numeric(10,2) NOT NULL,
+    "Leads" numeric,
+    "Compras" numeric,
+    "Page_View" numeric,
+    "Cliques" numeric,
+    "Impressoes" numeric,
+    "Alcance" numeric,
+    "Valor_de_Conversao" numeric(10,2),
+    "VV_3s" numeric,
+    "VV_25" numeric,
+    "VV_50" numeric,
+    "VV_75" numeric,
+    "VV_95" numeric,
+    "ad_id" "text" NOT NULL,
+    "id_data" "text" NOT NULL,
+    "creative_id" "text",
+    "status" "text",
+    "Qualificados" numeric,
+    "thumbnail_url" "text",
+    "permalink_url" "text",
+    "Leads_meta" numeric,
+    "Compras_meta" numeric,
+    "Valor_de_Conversao_meta" numeric,
+    "Conversas_iniciadas_meta" numeric
+);
+
+
+ALTER TABLE "public"."dados_camila" OWNER TO "supabase_admin";
+
+
+COMMENT ON TABLE "public"."dados_camila" IS 'This is a duplicate of dados_taina';
+
+
+
+CREATE TABLE IF NOT EXISTS "public"."dados_danielle" (
+    "Dia" "date" NOT NULL,
+    "Campanha" "text" NOT NULL,
+    "Conjunto_de_Anuncios" "text" NOT NULL,
+    "Anuncio" "text" NOT NULL,
+    "Objetivo" "text" NOT NULL,
+    "Custo" numeric(10,2) NOT NULL,
+    "Leads" numeric,
+    "Compras" numeric,
+    "Page_View" numeric,
+    "Cliques" numeric,
+    "Impressoes" numeric,
+    "Alcance" numeric,
+    "Valor_de_Conversao" numeric(10,2),
+    "VV_3s" numeric,
+    "VV_25" numeric,
+    "VV_50" numeric,
+    "VV_75" numeric,
+    "VV_95" numeric,
+    "ad_id" "text" NOT NULL,
+    "id_data" "text" NOT NULL,
+    "creative_id" "text",
+    "status" "text",
+    "Qualificados" numeric,
+    "thumbnail_url" "text",
+    "permalink_url" "text",
+    "Leads_meta" numeric,
+    "Compras_meta" numeric,
+    "Valor_de_Conversao_meta" numeric,
+    "Conversas_iniciadas_meta" numeric
+);
+
+
+ALTER TABLE "public"."dados_danielle" OWNER TO "supabase_admin";
+
+
+COMMENT ON TABLE "public"."dados_danielle" IS 'This is a duplicate of dados_rafa';
+
+
+
+CREATE TABLE IF NOT EXISTS "public"."dados_danillo" (
+    "Dia" "date" NOT NULL,
+    "Campanha" "text" NOT NULL,
+    "Conjunto_de_Anuncios" "text" NOT NULL,
+    "Anuncio" "text" NOT NULL,
+    "Objetivo" "text" NOT NULL,
+    "Custo" numeric(10,2) NOT NULL,
+    "Leads" numeric,
+    "Compras" numeric,
+    "Page_View" numeric,
+    "Cliques" numeric,
+    "Impressoes" numeric,
+    "Alcance" numeric,
+    "Valor_de_Conversao" numeric(10,2),
+    "VV_3s" numeric,
+    "VV_25" numeric,
+    "VV_50" numeric,
+    "VV_75" numeric,
+    "VV_95" numeric,
+    "ad_id" "text" NOT NULL,
+    "id_data" "text" NOT NULL,
+    "creative_id" "text",
+    "status" "text",
+    "Qualificados" numeric,
+    "thumbnail_url" "text",
+    "permalink_url" "text",
+    "Leads_meta" numeric,
+    "Compras_meta" numeric,
+    "Valor_de_Conversao_meta" numeric,
+    "Conversas_iniciadas_meta" numeric
+);
+
+
+ALTER TABLE "public"."dados_danillo" OWNER TO "supabase_admin";
+
+
+COMMENT ON TABLE "public"."dados_danillo" IS 'This is a duplicate of dados_danielle';
 
 
 
@@ -323,6 +483,46 @@ CREATE TABLE IF NOT EXISTS "public"."dados_mercca" (
 ALTER TABLE "public"."dados_mercca" OWNER TO "supabase_admin";
 
 
+CREATE TABLE IF NOT EXISTS "public"."dados_michele" (
+    "Dia" "date" NOT NULL,
+    "Campanha" "text" NOT NULL,
+    "Conjunto_de_Anuncios" "text" NOT NULL,
+    "Anuncio" "text" NOT NULL,
+    "Objetivo" "text" NOT NULL,
+    "Custo" numeric(10,2) NOT NULL,
+    "Leads" numeric,
+    "Compras" numeric,
+    "Page_View" numeric,
+    "Cliques" numeric,
+    "Impressoes" numeric,
+    "Alcance" numeric,
+    "Valor_de_Conversao" numeric(10,2),
+    "VV_3s" numeric,
+    "VV_25" numeric,
+    "VV_50" numeric,
+    "VV_75" numeric,
+    "VV_95" numeric,
+    "ad_id" "text" NOT NULL,
+    "id_data" "text" NOT NULL,
+    "creative_id" "text",
+    "status" "text",
+    "Qualificados" numeric,
+    "thumbnail_url" "text",
+    "permalink_url" "text",
+    "Leads_meta" numeric,
+    "Compras_meta" numeric,
+    "Valor_de_Conversao_meta" numeric,
+    "Conversas_iniciadas_meta" numeric
+);
+
+
+ALTER TABLE "public"."dados_michele" OWNER TO "supabase_admin";
+
+
+COMMENT ON TABLE "public"."dados_michele" IS 'This is a duplicate of dados_camila';
+
+
+
 CREATE TABLE IF NOT EXISTS "public"."dados_rafa" (
     "Dia" "date" NOT NULL,
     "Campanha" "text" NOT NULL,
@@ -395,6 +595,46 @@ ALTER TABLE "public"."dados_rogerio" OWNER TO "supabase_admin";
 
 
 COMMENT ON TABLE "public"."dados_rogerio" IS 'This is a duplicate of dados_katia';
+
+
+
+CREATE TABLE IF NOT EXISTS "public"."dados_taina" (
+    "Dia" "date" NOT NULL,
+    "Campanha" "text" NOT NULL,
+    "Conjunto_de_Anuncios" "text" NOT NULL,
+    "Anuncio" "text" NOT NULL,
+    "Objetivo" "text" NOT NULL,
+    "Custo" numeric(10,2) NOT NULL,
+    "Leads" numeric,
+    "Compras" numeric,
+    "Page_View" numeric,
+    "Cliques" numeric,
+    "Impressoes" numeric,
+    "Alcance" numeric,
+    "Valor_de_Conversao" numeric(10,2),
+    "VV_3s" numeric,
+    "VV_25" numeric,
+    "VV_50" numeric,
+    "VV_75" numeric,
+    "VV_95" numeric,
+    "ad_id" "text" NOT NULL,
+    "id_data" "text" NOT NULL,
+    "creative_id" "text",
+    "status" "text",
+    "Qualificados" numeric,
+    "thumbnail_url" "text",
+    "permalink_url" "text",
+    "Leads_meta" numeric,
+    "Compras_meta" numeric,
+    "Valor_de_Conversao_meta" numeric,
+    "Conversas_iniciadas_meta" numeric
+);
+
+
+ALTER TABLE "public"."dados_taina" OWNER TO "supabase_admin";
+
+
+COMMENT ON TABLE "public"."dados_taina" IS 'This is a duplicate of dados_alex';
 
 
 
@@ -477,6 +717,46 @@ COMMENT ON TABLE "public"."dados_unirnutri" IS 'This is a duplicate of dados_afo
 
 
 
+CREATE TABLE IF NOT EXISTS "public"."dados_vanessa" (
+    "Dia" "date" NOT NULL,
+    "Campanha" "text" NOT NULL,
+    "Conjunto_de_Anuncios" "text" NOT NULL,
+    "Anuncio" "text" NOT NULL,
+    "Objetivo" "text" NOT NULL,
+    "Custo" numeric(10,2) NOT NULL,
+    "Leads" numeric,
+    "Compras" numeric,
+    "Page_View" numeric,
+    "Cliques" numeric,
+    "Impressoes" numeric,
+    "Alcance" numeric,
+    "Valor_de_Conversao" numeric(10,2),
+    "VV_3s" numeric,
+    "VV_25" numeric,
+    "VV_50" numeric,
+    "VV_75" numeric,
+    "VV_95" numeric,
+    "ad_id" "text" NOT NULL,
+    "id_data" "text" NOT NULL,
+    "creative_id" "text",
+    "status" "text",
+    "Qualificados" numeric,
+    "thumbnail_url" "text",
+    "permalink_url" "text",
+    "Leads_meta" numeric,
+    "Compras_meta" numeric,
+    "Valor_de_Conversao_meta" numeric,
+    "Conversas_iniciadas_meta" numeric
+);
+
+
+ALTER TABLE "public"."dados_vanessa" OWNER TO "supabase_admin";
+
+
+COMMENT ON TABLE "public"."dados_vanessa" IS 'This is a duplicate of dados_danillo';
+
+
+
 ALTER TABLE ONLY "mercca_rastreio_whats"."whatsapp_anuncio"
     ADD CONSTRAINT "whatsapp_anuncio_pkey" PRIMARY KEY ("telefone");
 
@@ -487,8 +767,28 @@ ALTER TABLE ONLY "public"."dados_afonso"
 
 
 
+ALTER TABLE ONLY "public"."dados_alex"
+    ADD CONSTRAINT "dados_alex_pkey" PRIMARY KEY ("id_data");
+
+
+
 ALTER TABLE ONLY "public"."dados_amanda"
     ADD CONSTRAINT "dados_amanda_pkey" PRIMARY KEY ("id_data");
+
+
+
+ALTER TABLE ONLY "public"."dados_camila"
+    ADD CONSTRAINT "dados_camila_pkey" PRIMARY KEY ("id_data");
+
+
+
+ALTER TABLE ONLY "public"."dados_danielle"
+    ADD CONSTRAINT "dados_danielle_pkey" PRIMARY KEY ("id_data");
+
+
+
+ALTER TABLE ONLY "public"."dados_danillo"
+    ADD CONSTRAINT "dados_danillo_pkey" PRIMARY KEY ("id_data");
 
 
 
@@ -507,6 +807,11 @@ ALTER TABLE ONLY "public"."dados_mercca"
 
 
 
+ALTER TABLE ONLY "public"."dados_michele"
+    ADD CONSTRAINT "dados_michele_pkey" PRIMARY KEY ("id_data");
+
+
+
 ALTER TABLE ONLY "public"."dados_rafa"
     ADD CONSTRAINT "dados_rafa_pkey" PRIMARY KEY ("id_data");
 
@@ -517,6 +822,11 @@ ALTER TABLE ONLY "public"."dados_rogerio"
 
 
 
+ALTER TABLE ONLY "public"."dados_taina"
+    ADD CONSTRAINT "dados_taina_pkey" PRIMARY KEY ("id_data");
+
+
+
 ALTER TABLE ONLY "public"."dados_top"
     ADD CONSTRAINT "dados_top_pkey" PRIMARY KEY ("id_data");
 
@@ -524,6 +834,11 @@ ALTER TABLE ONLY "public"."dados_top"
 
 ALTER TABLE ONLY "public"."dados_unirnutri"
     ADD CONSTRAINT "dados_unirnutri_pkey1" PRIMARY KEY ("id_data");
+
+
+
+ALTER TABLE ONLY "public"."dados_vanessa"
+    ADD CONSTRAINT "dados_vanessa_pkey" PRIMARY KEY ("id_data");
 
 
 
@@ -770,10 +1085,38 @@ GRANT ALL ON TABLE "public"."dados_afonso" TO "service_role";
 
 
 
+GRANT ALL ON TABLE "public"."dados_alex" TO "postgres";
+GRANT ALL ON TABLE "public"."dados_alex" TO "anon";
+GRANT ALL ON TABLE "public"."dados_alex" TO "authenticated";
+GRANT ALL ON TABLE "public"."dados_alex" TO "service_role";
+
+
+
 GRANT ALL ON TABLE "public"."dados_amanda" TO "postgres";
 GRANT ALL ON TABLE "public"."dados_amanda" TO "anon";
 GRANT ALL ON TABLE "public"."dados_amanda" TO "authenticated";
 GRANT ALL ON TABLE "public"."dados_amanda" TO "service_role";
+
+
+
+GRANT ALL ON TABLE "public"."dados_camila" TO "postgres";
+GRANT ALL ON TABLE "public"."dados_camila" TO "anon";
+GRANT ALL ON TABLE "public"."dados_camila" TO "authenticated";
+GRANT ALL ON TABLE "public"."dados_camila" TO "service_role";
+
+
+
+GRANT ALL ON TABLE "public"."dados_danielle" TO "postgres";
+GRANT ALL ON TABLE "public"."dados_danielle" TO "anon";
+GRANT ALL ON TABLE "public"."dados_danielle" TO "authenticated";
+GRANT ALL ON TABLE "public"."dados_danielle" TO "service_role";
+
+
+
+GRANT ALL ON TABLE "public"."dados_danillo" TO "postgres";
+GRANT ALL ON TABLE "public"."dados_danillo" TO "anon";
+GRANT ALL ON TABLE "public"."dados_danillo" TO "authenticated";
+GRANT ALL ON TABLE "public"."dados_danillo" TO "service_role";
 
 
 
@@ -798,6 +1141,13 @@ GRANT ALL ON TABLE "public"."dados_mercca" TO "service_role";
 
 
 
+GRANT ALL ON TABLE "public"."dados_michele" TO "postgres";
+GRANT ALL ON TABLE "public"."dados_michele" TO "anon";
+GRANT ALL ON TABLE "public"."dados_michele" TO "authenticated";
+GRANT ALL ON TABLE "public"."dados_michele" TO "service_role";
+
+
+
 GRANT ALL ON TABLE "public"."dados_rafa" TO "postgres";
 GRANT ALL ON TABLE "public"."dados_rafa" TO "anon";
 GRANT ALL ON TABLE "public"."dados_rafa" TO "authenticated";
@@ -812,6 +1162,13 @@ GRANT ALL ON TABLE "public"."dados_rogerio" TO "service_role";
 
 
 
+GRANT ALL ON TABLE "public"."dados_taina" TO "postgres";
+GRANT ALL ON TABLE "public"."dados_taina" TO "anon";
+GRANT ALL ON TABLE "public"."dados_taina" TO "authenticated";
+GRANT ALL ON TABLE "public"."dados_taina" TO "service_role";
+
+
+
 GRANT ALL ON TABLE "public"."dados_top" TO "postgres";
 GRANT ALL ON TABLE "public"."dados_top" TO "anon";
 GRANT ALL ON TABLE "public"."dados_top" TO "authenticated";
@@ -823,6 +1180,13 @@ GRANT ALL ON TABLE "public"."dados_unirnutri" TO "postgres";
 GRANT ALL ON TABLE "public"."dados_unirnutri" TO "anon";
 GRANT ALL ON TABLE "public"."dados_unirnutri" TO "authenticated";
 GRANT ALL ON TABLE "public"."dados_unirnutri" TO "service_role";
+
+
+
+GRANT ALL ON TABLE "public"."dados_vanessa" TO "postgres";
+GRANT ALL ON TABLE "public"."dados_vanessa" TO "anon";
+GRANT ALL ON TABLE "public"."dados_vanessa" TO "authenticated";
+GRANT ALL ON TABLE "public"."dados_vanessa" TO "service_role";
 
 
 
