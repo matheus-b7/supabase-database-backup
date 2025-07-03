@@ -211,39 +211,6 @@ COMMENT ON TABLE "public"."dados_danielle" IS 'This is a duplicate of dados_rafa
 
 
 
-CREATE TABLE IF NOT EXISTS "public"."dados_mercca" (
-    "Dia" "date" NOT NULL,
-    "Campanha" "text" NOT NULL,
-    "Conjunto_de_Anuncios" "text" NOT NULL,
-    "Anuncio" "text" NOT NULL,
-    "Objetivo" "text" NOT NULL,
-    "Custo" numeric(10,2) NOT NULL,
-    "Leads" numeric,
-    "Compras" numeric,
-    "Page_View" numeric,
-    "Cliques" numeric,
-    "Impressoes" numeric,
-    "Alcance" numeric,
-    "Valor_de_Conversao" numeric(10,2),
-    "VV_3s" numeric,
-    "VV_25" numeric,
-    "VV_50" numeric,
-    "VV_75" numeric,
-    "VV_95" numeric,
-    "ad_id" "text" NOT NULL,
-    "id_data" "text" NOT NULL,
-    "creative_id" "text",
-    "status" "text",
-    "Qualificados" numeric,
-    "thumbnail_url" "text",
-    "permalink_url" "text",
-    "Leads_meta" numeric
-);
-
-
-ALTER TABLE "public"."dados_mercca" OWNER TO "supabase_admin";
-
-
 CREATE TABLE IF NOT EXISTS "public"."dados_rafa" (
     "Dia" "date" NOT NULL,
     "Campanha" "text" NOT NULL,
@@ -331,11 +298,6 @@ ALTER TABLE ONLY "public"."dados_clientes_cris"
 
 ALTER TABLE ONLY "public"."dados_danielle"
     ADD CONSTRAINT "dados_danielle_pkey" PRIMARY KEY ("id_data");
-
-
-
-ALTER TABLE ONLY "public"."dados_mercca"
-    ADD CONSTRAINT "dados_mercca_pkey" PRIMARY KEY ("id_data");
 
 
 
@@ -596,13 +558,6 @@ GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public".
 GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."dados_danielle" TO "anon";
 GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."dados_danielle" TO "authenticated";
 GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."dados_danielle" TO "service_role";
-
-
-
-GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."dados_mercca" TO "postgres";
-GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."dados_mercca" TO "anon";
-GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."dados_mercca" TO "authenticated";
-GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."dados_mercca" TO "service_role";
 
 
 
