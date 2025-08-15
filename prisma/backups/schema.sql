@@ -174,6 +174,47 @@ COMMENT ON TABLE "public"."dados_cake_lover" IS 'This is a duplicate of dados_ka
 
 
 
+CREATE TABLE IF NOT EXISTS "public"."dados_cassio" (
+    "Dia" "date" NOT NULL,
+    "Campanha" "text" NOT NULL,
+    "Conjunto_de_Anuncios" "text" NOT NULL,
+    "Anuncio" "text" NOT NULL,
+    "Objetivo" "text" NOT NULL,
+    "Custo" numeric(10,2) NOT NULL,
+    "Leads" numeric,
+    "Compras" numeric,
+    "Page_View" numeric,
+    "Cliques" numeric,
+    "Impressoes" numeric,
+    "Alcance" numeric,
+    "Valor_de_Conversao" numeric(10,2),
+    "VV_3s" numeric,
+    "VV_25" numeric,
+    "VV_50" numeric,
+    "VV_75" numeric,
+    "VV_95" numeric,
+    "ad_id" "text" NOT NULL,
+    "id_data" "text" NOT NULL,
+    "creative_id" "text",
+    "status" "text",
+    "Qualificados" numeric,
+    "thumbnail_url" "text",
+    "permalink_url" "text",
+    "Leads_meta" numeric,
+    "Compras_meta" numeric,
+    "Valor_de_Conversao_meta" numeric,
+    "Conversas_iniciadas_meta" numeric,
+    "Initiate_Checkout" numeric
+);
+
+
+ALTER TABLE "public"."dados_cassio" OWNER TO "supabase_admin";
+
+
+COMMENT ON TABLE "public"."dados_cassio" IS 'This is a duplicate of dados_kaio';
+
+
+
 CREATE TABLE IF NOT EXISTS "public"."dados_clientes_cris" (
     "Dia" "date" NOT NULL,
     "Campanha" "text" NOT NULL,
@@ -415,6 +456,11 @@ ALTER TABLE ONLY "mercca_rastreio_whats"."whatsapp_anuncio"
 
 ALTER TABLE ONLY "public"."dados_cake_lover"
     ADD CONSTRAINT "dados_cake_lover_pkey" PRIMARY KEY ("id_data");
+
+
+
+ALTER TABLE ONLY "public"."dados_cassio"
+    ADD CONSTRAINT "dados_cassio_pkey" PRIMARY KEY ("id_data");
 
 
 
@@ -688,6 +734,13 @@ GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public".
 GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."dados_cake_lover" TO "anon";
 GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."dados_cake_lover" TO "authenticated";
 GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."dados_cake_lover" TO "service_role";
+
+
+
+GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."dados_cassio" TO "postgres";
+GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."dados_cassio" TO "anon";
+GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."dados_cassio" TO "authenticated";
+GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."dados_cassio" TO "service_role";
 
 
 
