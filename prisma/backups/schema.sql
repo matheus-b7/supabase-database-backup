@@ -479,6 +479,51 @@ CREATE TABLE IF NOT EXISTS "public"."dados_rafa_barreiros" (
 ALTER TABLE "public"."dados_rafa_barreiros" OWNER TO "supabase_admin";
 
 
+CREATE TABLE IF NOT EXISTS "public"."extensions" (
+    "id" "uuid" NOT NULL,
+    "type" "text",
+    "settings" "jsonb",
+    "tenant_external_id" "text",
+    "inserted_at" timestamp(0) without time zone NOT NULL,
+    "updated_at" timestamp(0) without time zone NOT NULL
+);
+
+
+ALTER TABLE "public"."extensions" OWNER TO "supabase_admin";
+
+
+CREATE TABLE IF NOT EXISTS "public"."schema_migrations" (
+    "version" bigint NOT NULL,
+    "inserted_at" timestamp(0) without time zone
+);
+
+
+ALTER TABLE "public"."schema_migrations" OWNER TO "supabase_admin";
+
+
+CREATE TABLE IF NOT EXISTS "public"."tenants" (
+    "id" "uuid" NOT NULL,
+    "name" "text",
+    "external_id" "text",
+    "jwt_secret" "text",
+    "max_concurrent_users" integer DEFAULT 200 NOT NULL,
+    "inserted_at" timestamp(0) without time zone NOT NULL,
+    "updated_at" timestamp(0) without time zone NOT NULL,
+    "max_events_per_second" integer DEFAULT 100 NOT NULL,
+    "postgres_cdc_default" "text" DEFAULT 'postgres_cdc_rls'::"text",
+    "max_bytes_per_second" integer DEFAULT 100000 NOT NULL,
+    "max_channels_per_client" integer DEFAULT 100 NOT NULL,
+    "max_joins_per_second" integer DEFAULT 500 NOT NULL,
+    "suspend" boolean DEFAULT false,
+    "jwt_jwks" "jsonb",
+    "notify_private_alpha" boolean DEFAULT false,
+    "private_only" boolean DEFAULT false NOT NULL
+);
+
+
+ALTER TABLE "public"."tenants" OWNER TO "supabase_admin";
+
+
 ALTER TABLE ONLY "public"."dados_cake_lover"
     ADD CONSTRAINT "dados_cake_lover_pkey" PRIMARY KEY ("id_data");
 
@@ -531,6 +576,38 @@ ALTER TABLE ONLY "public"."dados_rafa_barreiros"
 
 ALTER TABLE ONLY "public"."dados_rafa"
     ADD CONSTRAINT "dados_rafa_pkey" PRIMARY KEY ("id_data");
+
+
+
+ALTER TABLE ONLY "public"."extensions"
+    ADD CONSTRAINT "extensions_pkey" PRIMARY KEY ("id");
+
+
+
+ALTER TABLE ONLY "public"."schema_migrations"
+    ADD CONSTRAINT "schema_migrations_pkey" PRIMARY KEY ("version");
+
+
+
+ALTER TABLE ONLY "public"."tenants"
+    ADD CONSTRAINT "tenants_pkey" PRIMARY KEY ("id");
+
+
+
+CREATE INDEX "extensions_tenant_external_id_index" ON "public"."extensions" USING "btree" ("tenant_external_id");
+
+
+
+CREATE UNIQUE INDEX "extensions_tenant_external_id_type_index" ON "public"."extensions" USING "btree" ("tenant_external_id", "type");
+
+
+
+CREATE UNIQUE INDEX "tenants_external_id_index" ON "public"."tenants" USING "btree" ("external_id");
+
+
+
+ALTER TABLE ONLY "public"."extensions"
+    ADD CONSTRAINT "extensions_tenant_external_id_fkey" FOREIGN KEY ("tenant_external_id") REFERENCES "public"."tenants"("external_id") ON DELETE CASCADE;
 
 
 
@@ -810,6 +887,27 @@ GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public".
 GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."dados_rafa_barreiros" TO "anon";
 GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."dados_rafa_barreiros" TO "authenticated";
 GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."dados_rafa_barreiros" TO "service_role";
+
+
+
+GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."extensions" TO "postgres";
+GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."extensions" TO "anon";
+GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."extensions" TO "authenticated";
+GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."extensions" TO "service_role";
+
+
+
+GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."schema_migrations" TO "postgres";
+GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."schema_migrations" TO "anon";
+GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."schema_migrations" TO "authenticated";
+GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."schema_migrations" TO "service_role";
+
+
+
+GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."tenants" TO "postgres";
+GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."tenants" TO "anon";
+GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."tenants" TO "authenticated";
+GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."tenants" TO "service_role";
 
 
 
