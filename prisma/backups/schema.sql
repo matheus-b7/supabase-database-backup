@@ -144,43 +144,6 @@ CREATE TABLE IF NOT EXISTS "public"."dados_cassio" (
 ALTER TABLE "public"."dados_cassio" OWNER TO "supabase_admin";
 
 
-CREATE TABLE IF NOT EXISTS "public"."dados_clientes_cris" (
-    "Dia" "text",
-    "Campanha" "text",
-    "Conjunto_de_Anuncios" "text",
-    "Anuncio" "text",
-    "Objetivo" "text",
-    "Custo" numeric,
-    "Leads" numeric,
-    "Compras" numeric,
-    "Page_View" numeric,
-    "Cliques" numeric,
-    "Impressoes" numeric,
-    "Alcance" numeric,
-    "Valor_de_Conversao" numeric,
-    "VV_3s" numeric,
-    "VV_25" numeric,
-    "VV_50" numeric,
-    "VV_75" numeric,
-    "VV_95" numeric,
-    "ad_id" "text",
-    "id_data" "text" NOT NULL,
-    "creative_id" "text",
-    "status" "text",
-    "Qualificados" numeric,
-    "thumbnail_url" "text",
-    "permalink_url" "text",
-    "Leads_meta" numeric,
-    "Compras_meta" numeric,
-    "Valor_de_Conversao_meta" numeric,
-    "Conversas_iniciadas_meta" numeric,
-    "conta" "text"
-);
-
-
-ALTER TABLE "public"."dados_clientes_cris" OWNER TO "supabase_admin";
-
-
 CREATE TABLE IF NOT EXISTS "public"."dados_danielle" (
     "Dia" "text",
     "Campanha" "text",
@@ -534,11 +497,6 @@ ALTER TABLE ONLY "public"."dados_cassio"
 
 
 
-ALTER TABLE ONLY "public"."dados_clientes_cris"
-    ADD CONSTRAINT "dados_clientes_cris_pkey" PRIMARY KEY ("id_data");
-
-
-
 ALTER TABLE ONLY "public"."dados_danielle"
     ADD CONSTRAINT "dados_danielle_pkey" PRIMARY KEY ("id_data");
 
@@ -824,13 +782,6 @@ GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public".
 GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."dados_cassio" TO "anon";
 GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."dados_cassio" TO "authenticated";
 GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."dados_cassio" TO "service_role";
-
-
-
-GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."dados_clientes_cris" TO "postgres";
-GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."dados_clientes_cris" TO "anon";
-GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."dados_clientes_cris" TO "authenticated";
-GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."dados_clientes_cris" TO "service_role";
 
 
 
