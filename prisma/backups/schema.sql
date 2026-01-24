@@ -181,6 +181,43 @@ CREATE TABLE IF NOT EXISTS "public"."dados_danielle" (
 ALTER TABLE "public"."dados_danielle" OWNER TO "supabase_admin";
 
 
+CREATE TABLE IF NOT EXISTS "public"."dados_ecoar" (
+    "Dia" "text",
+    "Campanha" "text",
+    "Conjunto_de_Anuncios" "text",
+    "Anuncio" "text",
+    "Objetivo" "text",
+    "Custo" numeric,
+    "Leads" numeric,
+    "Compras" numeric,
+    "Page_View" numeric,
+    "Cliques" numeric,
+    "Impressoes" numeric,
+    "Alcance" numeric,
+    "Valor_de_Conversao" numeric,
+    "VV_3s" numeric,
+    "VV_25" numeric,
+    "VV_50" numeric,
+    "VV_75" numeric,
+    "VV_95" numeric,
+    "ad_id" "text",
+    "id_data" "text" NOT NULL,
+    "creative_id" "text",
+    "status" "text",
+    "Qualificados" numeric,
+    "thumbnail_url" "text",
+    "permalink_url" "text",
+    "Leads_meta" numeric,
+    "Compras_meta" numeric,
+    "Valor_de_Conversao_meta" numeric,
+    "Conversas_iniciadas_meta" numeric,
+    "Initiate_Checkout" numeric
+);
+
+
+ALTER TABLE "public"."dados_ecoar" OWNER TO "supabase_admin";
+
+
 CREATE TABLE IF NOT EXISTS "public"."dados_icaro" (
     "Dia" "text",
     "Campanha" "text",
@@ -502,6 +539,11 @@ ALTER TABLE ONLY "public"."dados_danielle"
 
 
 
+ALTER TABLE ONLY "public"."dados_ecoar"
+    ADD CONSTRAINT "dados_ecoar_pkey" PRIMARY KEY ("id_data");
+
+
+
 ALTER TABLE ONLY "public"."dados_icaro"
     ADD CONSTRAINT "dados_icaro_pkey" PRIMARY KEY ("id_data");
 
@@ -789,6 +831,13 @@ GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public".
 GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."dados_danielle" TO "anon";
 GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."dados_danielle" TO "authenticated";
 GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."dados_danielle" TO "service_role";
+
+
+
+GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."dados_ecoar" TO "postgres";
+GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."dados_ecoar" TO "anon";
+GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."dados_ecoar" TO "authenticated";
+GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."dados_ecoar" TO "service_role";
 
 
 
