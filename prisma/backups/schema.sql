@@ -107,6 +107,43 @@ CREATE TABLE IF NOT EXISTS "public"."dados_cake_lover" (
 ALTER TABLE "public"."dados_cake_lover" OWNER TO "supabase_admin";
 
 
+CREATE OR REPLACE VIEW "public"."api_dados_cake_lover" AS
+ SELECT "dados_cake_lover"."Dia",
+    "dados_cake_lover"."Campanha",
+    "dados_cake_lover"."Conjunto_de_Anuncios",
+    "dados_cake_lover"."Anuncio",
+    "dados_cake_lover"."Objetivo",
+    "dados_cake_lover"."Custo",
+    "dados_cake_lover"."Leads",
+    "dados_cake_lover"."Compras",
+    "dados_cake_lover"."Page_View",
+    "dados_cake_lover"."Cliques",
+    "dados_cake_lover"."Impressoes",
+    "dados_cake_lover"."Alcance",
+    "dados_cake_lover"."Valor_de_Conversao",
+    "dados_cake_lover"."VV_3s",
+    "dados_cake_lover"."VV_25",
+    "dados_cake_lover"."VV_50",
+    "dados_cake_lover"."VV_75",
+    "dados_cake_lover"."VV_95",
+    "dados_cake_lover"."ad_id",
+    "dados_cake_lover"."id_data",
+    "dados_cake_lover"."creative_id",
+    "dados_cake_lover"."status",
+    "dados_cake_lover"."Qualificados",
+    "dados_cake_lover"."thumbnail_url",
+    "dados_cake_lover"."permalink_url",
+    "dados_cake_lover"."Leads_meta",
+    "dados_cake_lover"."Compras_meta",
+    "dados_cake_lover"."Valor_de_Conversao_meta",
+    "dados_cake_lover"."Conversas_iniciadas_meta",
+    "dados_cake_lover"."Initiate_Checkout"
+   FROM "public"."dados_cake_lover";
+
+
+ALTER VIEW "public"."api_dados_cake_lover" OWNER TO "supabase_admin";
+
+
 CREATE TABLE IF NOT EXISTS "public"."dados_cassio" (
     "Dia" "text",
     "Campanha" "text",
@@ -216,195 +253,6 @@ CREATE TABLE IF NOT EXISTS "public"."dados_ecoar" (
 
 
 ALTER TABLE "public"."dados_ecoar" OWNER TO "supabase_admin";
-
-
-CREATE TABLE IF NOT EXISTS "public"."dados_icaro" (
-    "Dia" "text",
-    "Campanha" "text",
-    "Conjunto_de_Anuncios" "text",
-    "Anuncio" "text",
-    "Objetivo" "text",
-    "Custo" numeric,
-    "Leads" numeric,
-    "Compras" numeric,
-    "Page_View" numeric,
-    "Cliques" numeric,
-    "Impressoes" numeric,
-    "Alcance" numeric,
-    "Valor_de_Conversao" numeric,
-    "VV_3s" numeric,
-    "VV_25" numeric,
-    "VV_50" numeric,
-    "VV_75" numeric,
-    "VV_95" numeric,
-    "ad_id" "text",
-    "id_data" "text" NOT NULL,
-    "creative_id" "text",
-    "status" "text",
-    "Qualificados" numeric,
-    "thumbnail_url" "text",
-    "permalink_url" "text",
-    "Leads_meta" numeric,
-    "Compras_meta" numeric,
-    "Valor_de_Conversao_meta" numeric,
-    "Conversas_iniciadas_meta" numeric,
-    "Initiate_Checkout" numeric
-);
-
-
-ALTER TABLE "public"."dados_icaro" OWNER TO "supabase_admin";
-
-
-COMMENT ON TABLE "public"."dados_icaro" IS 'This is a duplicate of dados_kaio';
-
-
-
-CREATE TABLE IF NOT EXISTS "public"."dados_kaio" (
-    "Dia" "text",
-    "Campanha" "text",
-    "Conjunto_de_Anuncios" "text",
-    "Anuncio" "text",
-    "Objetivo" "text",
-    "Custo" numeric,
-    "Leads" numeric,
-    "Compras" numeric,
-    "Page_View" numeric,
-    "Cliques" numeric,
-    "Impressoes" numeric,
-    "Alcance" numeric,
-    "Valor_de_Conversao" numeric,
-    "VV_3s" numeric,
-    "VV_25" numeric,
-    "VV_50" numeric,
-    "VV_75" numeric,
-    "VV_95" numeric,
-    "ad_id" "text",
-    "id_data" "text" NOT NULL,
-    "creative_id" "text",
-    "status" "text",
-    "Qualificados" numeric,
-    "thumbnail_url" "text",
-    "permalink_url" "text",
-    "Leads_meta" numeric,
-    "Compras_meta" numeric,
-    "Valor_de_Conversao_meta" numeric,
-    "Conversas_iniciadas_meta" numeric,
-    "Initiate_Checkout" numeric
-);
-
-
-ALTER TABLE "public"."dados_kaio" OWNER TO "supabase_admin";
-
-
-CREATE TABLE IF NOT EXISTS "public"."dados_lais" (
-    "Dia" "text",
-    "Campanha" "text",
-    "Conjunto_de_Anuncios" "text",
-    "Anuncio" "text",
-    "Objetivo" "text",
-    "Custo" numeric,
-    "Leads" numeric,
-    "Compras" numeric,
-    "Page_View" numeric,
-    "Cliques" numeric,
-    "Impressoes" numeric,
-    "Alcance" numeric,
-    "Valor_de_Conversao" numeric,
-    "VV_3s" numeric,
-    "VV_25" numeric,
-    "VV_50" numeric,
-    "VV_75" numeric,
-    "VV_95" numeric,
-    "ad_id" "text",
-    "id_data" "text" NOT NULL,
-    "creative_id" "text",
-    "status" "text",
-    "Qualificados" numeric,
-    "thumbnail_url" "text",
-    "permalink_url" "text",
-    "Leads_meta" numeric,
-    "Compras_meta" numeric,
-    "Valor_de_Conversao_meta" numeric,
-    "Conversas_iniciadas_meta" numeric,
-    "Initiate_Checkout" numeric
-);
-
-
-ALTER TABLE "public"."dados_lais" OWNER TO "supabase_admin";
-
-
-CREATE TABLE IF NOT EXISTS "public"."dados_le_brigadier" (
-    "Dia" "text",
-    "Campanha" "text",
-    "Conjunto_de_Anuncios" "text",
-    "Anuncio" "text",
-    "Objetivo" "text",
-    "Custo" numeric,
-    "Leads" numeric,
-    "Compras" numeric,
-    "Page_View" numeric,
-    "Cliques" numeric,
-    "Impressoes" numeric,
-    "Alcance" numeric,
-    "Valor_de_Conversao" numeric,
-    "VV_3s" numeric,
-    "VV_25" numeric,
-    "VV_50" numeric,
-    "VV_75" numeric,
-    "VV_95" numeric,
-    "ad_id" "text",
-    "id_data" "text" NOT NULL,
-    "creative_id" "text",
-    "status" "text",
-    "Qualificados" numeric,
-    "thumbnail_url" "text",
-    "permalink_url" "text",
-    "Leads_meta" numeric,
-    "Compras_meta" numeric,
-    "Valor_de_Conversao_meta" numeric,
-    "Conversas_iniciadas_meta" numeric,
-    "Initiate_Checkout" numeric
-);
-
-
-ALTER TABLE "public"."dados_le_brigadier" OWNER TO "supabase_admin";
-
-
-CREATE TABLE IF NOT EXISTS "public"."dados_metacognitiva" (
-    "Dia" "text",
-    "Campanha" "text",
-    "Conjunto_de_Anuncios" "text",
-    "Anuncio" "text",
-    "Objetivo" "text",
-    "Custo" numeric,
-    "Leads" numeric,
-    "Compras" numeric,
-    "Page_View" numeric,
-    "Cliques" numeric,
-    "Impressoes" numeric,
-    "Alcance" numeric,
-    "Valor_de_Conversao" numeric,
-    "VV_3s" numeric,
-    "VV_25" numeric,
-    "VV_50" numeric,
-    "VV_75" numeric,
-    "VV_95" numeric,
-    "ad_id" "text",
-    "id_data" "text" NOT NULL,
-    "creative_id" "text",
-    "status" "text",
-    "Qualificados" numeric,
-    "thumbnail_url" "text",
-    "permalink_url" "text",
-    "Leads_meta" numeric,
-    "Compras_meta" numeric,
-    "Valor_de_Conversao_meta" numeric,
-    "Conversas_iniciadas_meta" numeric,
-    "Initiate_Checkout" numeric
-);
-
-
-ALTER TABLE "public"."dados_metacognitiva" OWNER TO "supabase_admin";
 
 
 CREATE TABLE IF NOT EXISTS "public"."dados_rafa" (
@@ -544,31 +392,6 @@ ALTER TABLE ONLY "public"."dados_ecoar"
 
 
 
-ALTER TABLE ONLY "public"."dados_icaro"
-    ADD CONSTRAINT "dados_icaro_pkey" PRIMARY KEY ("id_data");
-
-
-
-ALTER TABLE ONLY "public"."dados_kaio"
-    ADD CONSTRAINT "dados_kaio_pkey" PRIMARY KEY ("id_data");
-
-
-
-ALTER TABLE ONLY "public"."dados_lais"
-    ADD CONSTRAINT "dados_lais_pkey" PRIMARY KEY ("id_data");
-
-
-
-ALTER TABLE ONLY "public"."dados_le_brigadier"
-    ADD CONSTRAINT "dados_le_brigadier_pkey" PRIMARY KEY ("id_data");
-
-
-
-ALTER TABLE ONLY "public"."dados_metacognitiva"
-    ADD CONSTRAINT "dados_metacognitiva_pkey" PRIMARY KEY ("id_data");
-
-
-
 ALTER TABLE ONLY "public"."dados_rafa_barreiros"
     ADD CONSTRAINT "dados_rafa_barreiros_pkey" PRIMARY KEY ("id_data");
 
@@ -614,10 +437,6 @@ ALTER TABLE ONLY "public"."extensions"
 
 
 ALTER PUBLICATION "supabase_realtime" OWNER TO "postgres";
-
-
-ALTER PUBLICATION "supabase_realtime" ADD TABLE ONLY "public"."dados_lais";
-
 
 
 
@@ -820,6 +639,13 @@ GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public".
 
 
 
+GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."api_dados_cake_lover" TO "postgres";
+GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."api_dados_cake_lover" TO "anon";
+GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."api_dados_cake_lover" TO "authenticated";
+GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."api_dados_cake_lover" TO "service_role";
+
+
+
 GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."dados_cassio" TO "postgres";
 GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."dados_cassio" TO "anon";
 GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."dados_cassio" TO "authenticated";
@@ -838,41 +664,6 @@ GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public".
 GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."dados_ecoar" TO "anon";
 GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."dados_ecoar" TO "authenticated";
 GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."dados_ecoar" TO "service_role";
-
-
-
-GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."dados_icaro" TO "postgres";
-GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."dados_icaro" TO "anon";
-GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."dados_icaro" TO "authenticated";
-GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."dados_icaro" TO "service_role";
-
-
-
-GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."dados_kaio" TO "postgres";
-GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."dados_kaio" TO "anon";
-GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."dados_kaio" TO "authenticated";
-GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."dados_kaio" TO "service_role";
-
-
-
-GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."dados_lais" TO "postgres";
-GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."dados_lais" TO "anon";
-GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."dados_lais" TO "authenticated";
-GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."dados_lais" TO "service_role";
-
-
-
-GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."dados_le_brigadier" TO "postgres";
-GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."dados_le_brigadier" TO "anon";
-GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."dados_le_brigadier" TO "authenticated";
-GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."dados_le_brigadier" TO "service_role";
-
-
-
-GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."dados_metacognitiva" TO "postgres";
-GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."dados_metacognitiva" TO "anon";
-GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."dados_metacognitiva" TO "authenticated";
-GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."dados_metacognitiva" TO "service_role";
 
 
 
