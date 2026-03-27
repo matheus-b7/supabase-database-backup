@@ -144,6 +144,47 @@ CREATE OR REPLACE VIEW "public"."api_dados_cake_lover" AS
 ALTER VIEW "public"."api_dados_cake_lover" OWNER TO "supabase_admin";
 
 
+CREATE TABLE IF NOT EXISTS "public"."dados_cake_lover_internacional" (
+    "Dia" "text",
+    "Campanha" "text",
+    "Conjunto_de_Anuncios" "text",
+    "Anuncio" "text",
+    "Objetivo" "text",
+    "Custo" numeric,
+    "Leads" numeric,
+    "Compras" numeric,
+    "Page_View" numeric,
+    "Cliques" numeric,
+    "Impressoes" numeric,
+    "Alcance" numeric,
+    "Valor_de_Conversao" numeric,
+    "VV_3s" numeric,
+    "VV_25" numeric,
+    "VV_50" numeric,
+    "VV_75" numeric,
+    "VV_95" numeric,
+    "ad_id" "text",
+    "id_data" "text" NOT NULL,
+    "creative_id" "text",
+    "status" "text",
+    "Qualificados" numeric,
+    "thumbnail_url" "text",
+    "permalink_url" "text",
+    "Leads_meta" numeric,
+    "Compras_meta" numeric,
+    "Valor_de_Conversao_meta" numeric,
+    "Conversas_iniciadas_meta" numeric,
+    "Initiate_Checkout" numeric
+);
+
+
+ALTER TABLE "public"."dados_cake_lover_internacional" OWNER TO "supabase_admin";
+
+
+COMMENT ON TABLE "public"."dados_cake_lover_internacional" IS 'This is a duplicate of dados_cake_lover';
+
+
+
 CREATE TABLE IF NOT EXISTS "public"."dados_cassio" (
     "Dia" "text",
     "Campanha" "text",
@@ -370,6 +411,11 @@ CREATE TABLE IF NOT EXISTS "public"."tenants" (
 
 
 ALTER TABLE "public"."tenants" OWNER TO "supabase_admin";
+
+
+ALTER TABLE ONLY "public"."dados_cake_lover_internacional"
+    ADD CONSTRAINT "dados_cake_lover_internacional_pkey" PRIMARY KEY ("id_data");
+
 
 
 ALTER TABLE ONLY "public"."dados_cake_lover"
@@ -643,6 +689,13 @@ GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public".
 GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."api_dados_cake_lover" TO "anon";
 GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."api_dados_cake_lover" TO "authenticated";
 GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."api_dados_cake_lover" TO "service_role";
+
+
+
+GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."dados_cake_lover_internacional" TO "postgres";
+GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."dados_cake_lover_internacional" TO "anon";
+GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."dados_cake_lover_internacional" TO "authenticated";
+GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."dados_cake_lover_internacional" TO "service_role";
 
 
 
