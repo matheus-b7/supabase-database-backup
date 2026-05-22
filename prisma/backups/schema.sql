@@ -144,6 +144,71 @@ CREATE OR REPLACE VIEW "public"."api_dados_cake_lover" AS
 ALTER VIEW "public"."api_dados_cake_lover" OWNER TO "supabase_admin";
 
 
+CREATE TABLE IF NOT EXISTS "public"."cakelover_leads" (
+    "id" bigint NOT NULL,
+    "data" "date" NOT NULL,
+    "nome" "text",
+    "email" "text",
+    "telefone" "text",
+    "utm_source" "text",
+    "utm_medium" "text",
+    "utm_campaign" "text",
+    "utm_content" "text",
+    "origem" "text",
+    "page_url" "text",
+    "extras" "jsonb" DEFAULT '{}'::"jsonb" NOT NULL,
+    "created_at" timestamp with time zone DEFAULT "now"() NOT NULL
+);
+
+
+ALTER TABLE "public"."cakelover_leads" OWNER TO "postgres";
+
+
+ALTER TABLE "public"."cakelover_leads" ALTER COLUMN "id" ADD GENERATED ALWAYS AS IDENTITY (
+    SEQUENCE NAME "public"."cakelover_leads_id_seq"
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1
+);
+
+
+
+CREATE TABLE IF NOT EXISTS "public"."cakelover_vendas" (
+    "id" bigint NOT NULL,
+    "data" "date" NOT NULL,
+    "nome" "text",
+    "email" "text",
+    "telefone" "text",
+    "produto" "text",
+    "cod_produto" "text",
+    "valor_venda" numeric(14,2),
+    "moeda" "text",
+    "status" "text",
+    "utm_source" "text",
+    "utm_medium" "text",
+    "utm_campaign" "text",
+    "utm_content" "text",
+    "extras" "jsonb" DEFAULT '{}'::"jsonb" NOT NULL,
+    "created_at" timestamp with time zone DEFAULT "now"() NOT NULL
+);
+
+
+ALTER TABLE "public"."cakelover_vendas" OWNER TO "postgres";
+
+
+ALTER TABLE "public"."cakelover_vendas" ALTER COLUMN "id" ADD GENERATED ALWAYS AS IDENTITY (
+    SEQUENCE NAME "public"."cakelover_vendas_id_seq"
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1
+);
+
+
+
 CREATE TABLE IF NOT EXISTS "public"."dados_cake_lover_internacional" (
     "Dia" "text",
     "Campanha" "text",
@@ -341,6 +406,16 @@ CREATE TABLE IF NOT EXISTS "public"."tenants" (
 ALTER TABLE "public"."tenants" OWNER TO "supabase_admin";
 
 
+ALTER TABLE ONLY "public"."cakelover_leads"
+    ADD CONSTRAINT "cakelover_leads_pkey" PRIMARY KEY ("id");
+
+
+
+ALTER TABLE ONLY "public"."cakelover_vendas"
+    ADD CONSTRAINT "cakelover_vendas_pkey" PRIMARY KEY ("id");
+
+
+
 ALTER TABLE ONLY "public"."dados_cake_lover_internacional"
     ADD CONSTRAINT "dados_cake_lover_internacional_pkey" PRIMARY KEY ("id_data");
 
@@ -386,6 +461,46 @@ CREATE INDEX "extensions_tenant_external_id_index" ON "public"."extensions" USIN
 
 
 CREATE UNIQUE INDEX "extensions_tenant_external_id_type_index" ON "public"."extensions" USING "btree" ("tenant_external_id", "type");
+
+
+
+CREATE INDEX "idx_cakelover_leads_data" ON "public"."cakelover_leads" USING "btree" ("data");
+
+
+
+CREATE INDEX "idx_cakelover_leads_email" ON "public"."cakelover_leads" USING "btree" ("email");
+
+
+
+CREATE INDEX "idx_cakelover_leads_extras_gin" ON "public"."cakelover_leads" USING "gin" ("extras" "jsonb_path_ops");
+
+
+
+CREATE INDEX "idx_cakelover_leads_origem_data" ON "public"."cakelover_leads" USING "btree" ("origem", "data");
+
+
+
+CREATE INDEX "idx_cakelover_leads_telefone" ON "public"."cakelover_leads" USING "btree" ("telefone");
+
+
+
+CREATE INDEX "idx_cakelover_vendas_data" ON "public"."cakelover_vendas" USING "btree" ("data");
+
+
+
+CREATE INDEX "idx_cakelover_vendas_email" ON "public"."cakelover_vendas" USING "btree" ("email");
+
+
+
+CREATE INDEX "idx_cakelover_vendas_email_cod_prod" ON "public"."cakelover_vendas" USING "btree" ("email", "cod_produto");
+
+
+
+CREATE INDEX "idx_cakelover_vendas_extras_gin" ON "public"."cakelover_vendas" USING "gin" ("extras" "jsonb_path_ops");
+
+
+
+CREATE INDEX "idx_cakelover_vendas_telefone" ON "public"."cakelover_vendas" USING "btree" ("telefone");
 
 
 
@@ -607,6 +722,30 @@ GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public".
 GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."api_dados_cake_lover" TO "anon";
 GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."api_dados_cake_lover" TO "authenticated";
 GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."api_dados_cake_lover" TO "service_role";
+
+
+
+GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."cakelover_leads" TO "anon";
+GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."cakelover_leads" TO "authenticated";
+GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."cakelover_leads" TO "service_role";
+
+
+
+GRANT ALL ON SEQUENCE "public"."cakelover_leads_id_seq" TO "anon";
+GRANT ALL ON SEQUENCE "public"."cakelover_leads_id_seq" TO "authenticated";
+GRANT ALL ON SEQUENCE "public"."cakelover_leads_id_seq" TO "service_role";
+
+
+
+GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."cakelover_vendas" TO "anon";
+GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."cakelover_vendas" TO "authenticated";
+GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE "public"."cakelover_vendas" TO "service_role";
+
+
+
+GRANT ALL ON SEQUENCE "public"."cakelover_vendas_id_seq" TO "anon";
+GRANT ALL ON SEQUENCE "public"."cakelover_vendas_id_seq" TO "authenticated";
+GRANT ALL ON SEQUENCE "public"."cakelover_vendas_id_seq" TO "service_role";
 
 
 
