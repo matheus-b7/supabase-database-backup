@@ -4,7 +4,7 @@ SET session_replication_role = replica;
 -- PostgreSQL database dump
 --
 
--- \restrict QFVMn31xwg9xS145JU7ZJYY079bJSW72FDnBTGY5QTEpYzyHJnWBfmPpv74eNCs
+-- \restrict 4P4tnsoEF74zFHFUP82OreJIcc8Y059PGBB2rbcBOQ83zXP5Gn2ej4UExs3AaeS
 
 -- Dumped from database version 15.8
 -- Dumped by pg_dump version 17.6
@@ -12384,6 +12384,7 @@ COPY "public"."cakelover_vendas" ("id", "data", "nome", "email", "telefone", "pr
 1705	2026-03-30	Nathalia Estigarribia	estigarribia29duarte@gmail.com	595992798002	Ebook - La mejor tarta de chocolate del mundo	7380792	6.52	USD	Pago	Instagram_Feed	ABERTO-HISPLANOABLANTE	MTC_ANDROMEDA	ADC1-3	{"sck": "Instagram_Feed|ABERTO-HISPLANOABLANTE|MTC_ANDROMEDA|ADC1-3|6928657038295", "pais": "Paraguay", "valor_convertido": "R$ 34,26"}	2026-05-22 02:04:57.704909+00
 1706	2026-03-31	YOLANDA ITCHZEL ARANDA	itchzel.aranda.ceniceros@outlook.com	528717857205	Ebook - La mejor tarta de chocolate del mundo	7380792	6.54	USD	Pago	Instagram_Feed	ABERTO-HISPLANOABLANTE	MTC_ANDROMEDA	ADC3-2	{"sck": "Instagram_Feed|ABERTO-HISPLANOABLANTE|MTC_ANDROMEDA|ADC3-2|6928657038295", "pais": "Mexico", "valor_convertido": "R$ 34,34"}	2026-05-22 02:04:57.704909+00
 1707	2026-03-31	Carina Fontes	fontescarina87@gmail.com	351912081059	Ebook - La mejor tarta de chocolate del mundo	7380792	5.81	USD	Pago	ckl.one	\N	\N	\N	{"sck": "ckl.one", "pais": "Portugal", "valor_convertido": "R$ 30,53"}	2026-05-22 02:04:57.704909+00
+1746	2026-05-24	Faviola Cañete Baez	fabvycb@hotmail.com	5950973167679	Receitas Cakelover	4199699	43.39	BRL	Pago	NEW_CLUB_SALES_PAGE_FROM_SHOWCASE_OCB				"{\\"sck\\":\\"NEW_CLUB_SALES_PAGE_FROM_SHOWCASE_OCB\\"}"	2026-05-24 13:39:44.502145+00
 1708	2026-03-31	Alicia Zambrana ruiz	libertades27@icloud.com	34662048391	Ebook - La mejor tarta de chocolate del mundo	7380792	5.86	USD	Pago	Instagram_Feed	ABERTO-HISPLANOABLANTE	MTC_ANDROMEDA	ADC3-3	{"sck": "Instagram_Feed|ABERTO-HISPLANOABLANTE|MTC_ANDROMEDA|ADC3-3|6928657038295", "pais": "Spain", "valor_convertido": "R$ 30,77"}	2026-05-22 02:04:57.704909+00
 1709	2026-03-31	Jesus Mata	jesusluciano26@hotmail.com	56998559451	Ebook - La mejor tarta de chocolate del mundo	7380792	5.47	USD	Pago	Instagram_Stories	ABERTO-HISPLANOABLANTE	MTC_ANDROMEDA	ADC3-2	{"sck": "Instagram_Stories|ABERTO-HISPLANOABLANTE|MTC_ANDROMEDA|ADC3-2|6928657038295", "pais": "Chile", "valor_convertido": "R$ 28,72"}	2026-05-22 02:04:57.704909+00
 1710	2026-03-31	Mónica Rojas	mony85roca@gmail.com	5950983911522	Ebook - La mejor tarta de chocolate del mundo	7380792	6.54	USD	Pago	Facebook_Mobile_Feed	ABERTO-HISPLANOABLANTE	MTC_ANDROMEDA	ADC1-3	{"sck": "Facebook_Mobile_Feed|ABERTO-HISPLANOABLANTE|MTC_ANDROMEDA|ADC1-3|6928657038295", "pais": "Paraguay", "valor_convertido": "R$ 34,34"}	2026-05-22 02:04:57.704909+00
@@ -12405,6 +12406,7 @@ COPY "public"."cakelover_vendas" ("id", "data", "nome", "email", "telefone", "pr
 1726	2026-04-24	MYRIAN AYALA BURGOS	myriancake@gmail.com	17876896756	Clase - La mejor tarta de chocolate del mundo [acceso de por vida]	7496041	14.12	USD	Pago	ebook	\N	\N	\N	{"sck": "ebook", "pais": "Puerto Rico", "valor_convertido": "R$ 70,82"}	2026-05-22 02:04:57.704909+00
 1727	2026-04-24	Erika Garcia de Alba	garroyo@vainillachocolate.mx	524433693877	Clase - La mejor tarta de chocolate del mundo [Acceso durante 1 año]	7544108	18.56	USD	Pago	Instagram_Stories	ABERTO_ADC2-3	MTC_CURSO_TESTE_LP02	ADC2-3_ABR26	{"sck": "Instagram_Stories|ABERTO_ADC2-3|MTC_CURSO_TESTE_LP02|ADC2-3_ABR26|6945483529695", "pais": "Mexico", "valor_convertido": "R$ 93,08"}	2026-05-22 02:04:57.704909+00
 1728	2026-04-26	MARIELBA SANCHEZ	logomars16@gmail.com	5930999057940	Clase - La mejor tarta de chocolate del mundo [Acceso durante 1 año]	7544108	18.46	USD	Pago	Instagram_Feed	ABERTO_ADC2	MTC_CURSO_TESTE_LP01	ADC2_ABR26	{"sck": "Instagram_Feed|ABERTO_ADC2|MTC_CURSO_TESTE_LP01|ADC2_ABR26|6945483550695", "pais": "Ecuador", "valor_convertido": "R$ 91,94"}	2026-05-22 02:04:57.704909+00
+1747	2026-05-24	CELMA DE OLIVEIRA PEREIRA	celmaedu31@hotmail.com	77981579814	Novo Beabá do Buttercream	3101998	497.02	BRL	Pago	NEW_CLUB_CLUB_SALES				"{\\"sck\\":\\"NEW_CLUB_CLUB_SALES\\"}"	2026-05-24 18:16:51.064622+00
 1729	2026-04-26	MARIELBA SANCHEZ	logomars16@gmail.com	5930999057940	Clase - La mejor tarta de chocolate del mundo [acceso de por vida]	7496041	4.64	USD	Pago	Instagram_Feed	ABERTO_ADC2	MTC_CURSO_TESTE_LP01	ADC2_ABR26	{"sck": "Instagram_Feed|ABERTO_ADC2|MTC_CURSO_TESTE_LP01|ADC2_ABR26|6945483550695", "pais": "Ecuador", "valor_convertido": "R$ 23,11"}	2026-05-22 02:04:57.704909+00
 1730	2026-04-26	Carmen Caban	ccaban14@gmail.com	17872195841	Ebook - La mejor tarta de chocolate del mundo	7380792	6.54	USD	Pago	Facebook_Stories	ABERTO_ADC3-2	MTC_TESTE	ADC3-2	{"sck": "Facebook_Stories|ABERTO_ADC3-2|MTC_TESTE|ADC3-2|6945486564295", "pais": "Puerto Rico", "valor_convertido": "R$ 32,57"}	2026-05-22 02:04:57.704909+00
 1731	2026-04-27	Hipolito Marino Marino	marinolito1982@gmail.com	59172016376	Clase - La mejor tarta de chocolate del mundo [Acceso durante 1 año]	7544108	18.65	USD	Pago	Facebook_Mobile_Feed	ABERTO_ADC1-V2	MTC_CURSO_TESTE_LP02	ADC1-V2_ABR26	{"sck": "Facebook_Mobile_Feed|ABERTO_ADC1-V2|MTC_CURSO_TESTE_LP02|ADC1-V2_ABR26|6947880528095", "pais": "Bolivia", "valor_convertido": "R$ 92,89"}	2026-05-22 02:04:57.704909+00
@@ -12415,6 +12417,7 @@ COPY "public"."cakelover_vendas" ("id", "data", "nome", "email", "telefone", "pr
 1736	2026-05-13	Paola Beltrán	pabbepuyo@hotmail.com	5930992693816	Ebook - La mejor tarta de chocolate del mundo	7380792	6.54	USD	Pago	Instagram_Stories	ABERTO-HISPLANOABLANTE	MTC_ANDROMEDA	ADC2-3_MAI26-V2	{"sck": "Instagram_Stories|ABERTO-HISPLANOABLANTE|MTC_ANDROMEDA|ADC2-3_MAI26-V2|6928657038295", "pais": "Ecuador", "valor_convertido": "R$ 32,88"}	2026-05-22 02:04:57.704909+00
 1737	2026-05-19	Luisa Chin Lau	luisachin8@gmail.com	50766324137	Ebook - La mejor tarta de chocolate del mundo	7380792	6.54	USD	Pago	Instagram_Feed	ABERTO-HISPLANOABLANTE	MTC_ANDROMEDA	ADC2-3_MAI26-V3	{"sck": "Instagram_Feed|ABERTO-HISPLANOABLANTE|MTC_ANDROMEDA|ADC2-3_MAI26-V3|6928657038295", "pais": "Panama", "valor_convertido": "R$ 32,79"}	2026-05-22 02:04:57.704909+00
 1738	2026-05-20	Marilceia silva	ceia.prado@gmail.com	12992066261	Ebook - La mejor tarta de chocolate del mundo	7380792	35.91	USD	Pago	Instagram_Feed	ABERTO-HISPLANOABLANTE	MTC_ANDROMEDA	ADC2-3_MAI26-V2	{"sck": "Instagram_Feed|ABERTO-HISPLANOABLANTE|MTC_ANDROMEDA|ADC2-3_MAI26-V2|6928657038295", "pais": "Brasil"}	2026-05-22 02:04:57.704909+00
+1748	2026-05-24	Petronila coelho marques	petronilacoelhomarques79@gmail.com	89994054241	Lucrando com Faça e Venda	5523991	16.41	BRL	Pago	l.instagram.com				"{\\"sck\\":\\"l.instagram.com\\"}"	2026-05-24 20:05:35.066784+00
 \.
 
 
@@ -24653,7 +24656,7 @@ SELECT pg_catalog.setval('"public"."cakelover_leads_id_seq"', 10533, true);
 -- Name: cakelover_vendas_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('"public"."cakelover_vendas_id_seq"', 1743, true);
+SELECT pg_catalog.setval('"public"."cakelover_vendas_id_seq"', 1748, true);
 
 
 --
@@ -24667,6 +24670,6 @@ SELECT pg_catalog.setval('"supabase_functions"."hooks_id_seq"', 1, false);
 -- PostgreSQL database dump complete
 --
 
--- \unrestrict QFVMn31xwg9xS145JU7ZJYY079bJSW72FDnBTGY5QTEpYzyHJnWBfmPpv74eNCs
+-- \unrestrict 4P4tnsoEF74zFHFUP82OreJIcc8Y059PGBB2rbcBOQ83zXP5Gn2ej4UExs3AaeS
 
 RESET ALL;
