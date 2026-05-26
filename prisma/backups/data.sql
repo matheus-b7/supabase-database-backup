@@ -4,7 +4,7 @@ SET session_replication_role = replica;
 -- PostgreSQL database dump
 --
 
--- \restrict 4P4tnsoEF74zFHFUP82OreJIcc8Y059PGBB2rbcBOQ83zXP5Gn2ej4UExs3AaeS
+-- \restrict rjQJhgUE48jbCjgbYL2vPjBgBv4nkPWmvNiOzZDz8P1fuC5zw0LEB6PMc3vXTSw
 
 -- Dumped from database version 15.8
 -- Dumped by pg_dump version 17.6
@@ -10676,6 +10676,8 @@ COPY "public"."cakelover_leads" ("id", "data", "nome", "email", "telefone", "utm
 10531	2026-05-14	Eliane	elianedacostaoldenburg@gmail.com	92994368940	youtube	descricao	cardapio-2024	organic	extra	https://cardapio.cakelover.com.br/	{}	2026-05-22 02:04:51.653607+00
 10532	2026-05-17	Francisco Osterno Neto	fco.osterno@gmail.com	98984235592	youtube	descricao	cardapio-2024	organic	extra	https://cardapio.cakelover.com.br/	{}	2026-05-22 02:04:51.653607+00
 10533	2026-05-21	Arituza	arituzaabe@hotmail.com	11997537433	youtube	descricao	cardapio-2024	organic	extra	https://cardapio.cakelover.com.br/	{}	2026-05-22 02:04:51.653607+00
+10534	2026-05-25	Marcia	marcinha237@gmail.com	31997772677	youtube	descricao	cardapio-2024	organic	extra	https://cardapio.cakelover.com.br/	{"source": "hotmart_send_form", "form_id": "mvuVjBw", "referrer": "https://www.youtube.com/", "timestamp": "2026-05-25T11:19:35.956Z", "page_title": "Cardápio Editável – Monte seu cardápio de forma simples e fácil utilizando o nosso modelo", "user_agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/30.0 Chrome/143.0.0.0 Mobile Safari/537.36", "phone_digits": "31997772677"}	2026-05-25 11:19:42.178477+00
+10535	2026-05-25	Tacimar	tacisbakery@gmail.com	21968908273	youtube	descricao	cardapio-2024	organic	extra	https://cardapio.cakelover.com.br/	{"source": "hotmart_send_form", "form_id": "mvuVjBw", "referrer": "https://cardapio.cakelover.com.br/?utm_source=youtube&utm_medium=descricao&utm_content=organic&utm_campaign=cardapio-2024", "timestamp": "2026-05-25T18:39:30.348Z", "page_title": "Cardápio Editável – Monte seu cardápio de forma simples e fácil utilizando o nosso modelo", "user_agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.5 Mobile/15E148 Safari/604.1", "phone_digits": "21968908273"}	2026-05-25 18:39:34.13986+00
 \.
 
 
@@ -10685,6 +10687,9 @@ COPY "public"."cakelover_leads" ("id", "data", "nome", "email", "telefone", "utm
 
 COPY "public"."cakelover_vendas" ("id", "data", "nome", "email", "telefone", "produto", "cod_produto", "valor_venda", "moeda", "status", "utm_source", "utm_medium", "utm_campaign", "utm_content", "extras", "created_at") FROM stdin;
 1740	2026-05-22	VANESSA APARECIDA DE SOUZA SILVA	vanessa.032011@gmail.com	11961234157	Black Cakelover 2025: A Semana da Virada	6666460	45.01	BRL	Pago	beaba.cakelover.com.br				"{\\"sck\\":\\"beaba.cakelover.com.br\\"}"	2026-05-22 13:47:45.453651+00
+1756	2026-05-25	Rosangela Tramontina	mixrocupcakes@gmail.com	54992511751	Black Cakelover 2025: A Semana da Virada	6666460	21.59	BRL	Pago	NEW_CLUB_CLUB_SALES				"{\\"sck\\":\\"NEW_CLUB_CLUB_SALES\\"}"	2026-05-25 13:09:12.905176+00
+1758	2026-05-25	VANESSA APARECIDA DE SOUZA SILVA	vanessa.032011@gmail.com	11961234157	Black Cakelover 2025: A Semana da Virada	6666460	45.01	BRL	Pago	beaba.cakelover.com.br				"{\\"sck\\":\\"beaba.cakelover.com.br\\"}"	2026-05-25 13:22:04.947141+00
+1760	2026-05-25	Marcos Henrique Duarte Ribeiro	marcosduartemhd@gmail.com	63992417600	CRILI	2713073	399.00	BRL	Pago	NEW_CLUB_SALES_PAGE_FROM_SHOWCASE_C				"{\\"sck\\":\\"NEW_CLUB_SALES_PAGE_FROM_SHOWCASE_C\\"}"	2026-05-25 14:10:09.736453+00
 9	2026-01-01	Vivian caetano	vcaet_16@hotmail.com	31999500920	Livro Digital Beabá do Buttercream	4131094	49.90	BRL	Pago	\N	\N	\N	\N	{}	2026-05-22 02:04:54.140235+00
 10	2026-01-01	cynthia salvatore argentin	cynthia.rapino@hotmail.com	19142653132	Receitas Cakelover	4199699	29.90	BRL	Pago	\N	\N	\N	\N	{}	2026-05-22 02:04:54.140235+00
 11	2026-01-01	CLAUDINEI ABREU FERREIRA	claudineiferreiraconf@gmail.com	11964863295	Receitas Cakelover	4199699	29.90	BRL	Pago	\N	\N	\N	\N	{}	2026-05-22 02:04:54.140235+00
@@ -12418,6 +12423,8 @@ COPY "public"."cakelover_vendas" ("id", "data", "nome", "email", "telefone", "pr
 1737	2026-05-19	Luisa Chin Lau	luisachin8@gmail.com	50766324137	Ebook - La mejor tarta de chocolate del mundo	7380792	6.54	USD	Pago	Instagram_Feed	ABERTO-HISPLANOABLANTE	MTC_ANDROMEDA	ADC2-3_MAI26-V3	{"sck": "Instagram_Feed|ABERTO-HISPLANOABLANTE|MTC_ANDROMEDA|ADC2-3_MAI26-V3|6928657038295", "pais": "Panama", "valor_convertido": "R$ 32,79"}	2026-05-22 02:04:57.704909+00
 1738	2026-05-20	Marilceia silva	ceia.prado@gmail.com	12992066261	Ebook - La mejor tarta de chocolate del mundo	7380792	35.91	USD	Pago	Instagram_Feed	ABERTO-HISPLANOABLANTE	MTC_ANDROMEDA	ADC2-3_MAI26-V2	{"sck": "Instagram_Feed|ABERTO-HISPLANOABLANTE|MTC_ANDROMEDA|ADC2-3_MAI26-V2|6928657038295", "pais": "Brasil"}	2026-05-22 02:04:57.704909+00
 1748	2026-05-24	Petronila coelho marques	petronilacoelhomarques79@gmail.com	89994054241	Lucrando com Faça e Venda	5523991	16.41	BRL	Pago	l.instagram.com				"{\\"sck\\":\\"l.instagram.com\\"}"	2026-05-24 20:05:35.066784+00
+1757	2026-05-25	JANE M S SOUZA	janemary1511@gmail.com	71993557006	Black Cakelover 2025: A Semana da Virada	6666460	109.27	BRL	Pago	wpp				"{\\"sck\\":\\"wpp\\"}"	2026-05-25 13:14:34.514604+00
+1759	2026-05-25	PAULA CRISTINA	boutiquedotrigo2023@gmail.com	21982916859	Black Cakelover 2025: A Semana da Virada	6666460	109.27	BRL	Pago	instabio	social	link_in_bio		"{\\"sck\\":\\"instabio|social|link_in_bio\\"}"	2026-05-25 13:27:13.64414+00
 \.
 
 
@@ -24649,14 +24656,14 @@ SELECT pg_catalog.setval('"auth"."refresh_tokens_id_seq"', 1, false);
 -- Name: cakelover_leads_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('"public"."cakelover_leads_id_seq"', 10533, true);
+SELECT pg_catalog.setval('"public"."cakelover_leads_id_seq"', 10535, true);
 
 
 --
 -- Name: cakelover_vendas_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('"public"."cakelover_vendas_id_seq"', 1748, true);
+SELECT pg_catalog.setval('"public"."cakelover_vendas_id_seq"', 1760, true);
 
 
 --
@@ -24670,6 +24677,6 @@ SELECT pg_catalog.setval('"supabase_functions"."hooks_id_seq"', 1, false);
 -- PostgreSQL database dump complete
 --
 
--- \unrestrict 4P4tnsoEF74zFHFUP82OreJIcc8Y059PGBB2rbcBOQ83zXP5Gn2ej4UExs3AaeS
+-- \unrestrict rjQJhgUE48jbCjgbYL2vPjBgBv4nkPWmvNiOzZDz8P1fuC5zw0LEB6PMc3vXTSw
 
 RESET ALL;
