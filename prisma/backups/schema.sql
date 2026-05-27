@@ -154,7 +154,6 @@ CREATE TABLE IF NOT EXISTS "public"."cakelover_leads" (
     "utm_medium" "text",
     "utm_campaign" "text",
     "utm_content" "text",
-    "origem" "text",
     "page_url" "text",
     "extras" "jsonb" DEFAULT '{}'::"jsonb" NOT NULL,
     "created_at" timestamp with time zone DEFAULT "now"() NOT NULL
@@ -473,10 +472,6 @@ CREATE INDEX "idx_cakelover_leads_email" ON "public"."cakelover_leads" USING "bt
 
 
 CREATE INDEX "idx_cakelover_leads_extras_gin" ON "public"."cakelover_leads" USING "gin" ("extras" "jsonb_path_ops");
-
-
-
-CREATE INDEX "idx_cakelover_leads_origem_data" ON "public"."cakelover_leads" USING "btree" ("origem", "data");
 
 
 
